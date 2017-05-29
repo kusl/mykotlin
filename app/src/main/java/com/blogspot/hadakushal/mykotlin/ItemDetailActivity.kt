@@ -23,9 +23,9 @@ class ItemDetailActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
-        val oneplustwo = 1 + 2
+        val onePlusTwo: Int = 1 + 2
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "One plus two is " + oneplustwo, Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "One plus two is " + onePlusTwo, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
