@@ -40,7 +40,7 @@ class ItemListActivity : AppCompatActivity() {
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "This is the FAB: floating action button.", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
