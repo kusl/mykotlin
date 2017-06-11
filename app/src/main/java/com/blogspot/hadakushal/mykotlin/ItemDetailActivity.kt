@@ -1,12 +1,14 @@
 package com.blogspot.hadakushal.mykotlin
 
 import android.content.Intent
+import android.icu.text.DateFormat
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
+import java.util.*
 
 /**
  * An activity representing a single Item detail screen. This
@@ -24,8 +26,9 @@ class ItemDetailActivity : AppCompatActivity() {
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         val onePlusTwo: Int = 1 + 2
+        val currentTime: String = DateFormat.getDateTimeInstance().format(Date())
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "One plus two is " + onePlusTwo, Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "One plus two is $onePlusTwo. Current time is $currentTime", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
